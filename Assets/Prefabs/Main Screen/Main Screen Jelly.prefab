@@ -72,10 +72,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LossFoodPerMinute: 5
   LossInterPerMinute: 2
+  LossFoodPerMinutePaused: 1.5
+  LossInterPerMinutePaused: 0.5
   CurrentFood: 100
   CurrentInteraction: 100
-  MeterFood: {fileID: 0}
-  MeterInteraction: {fileID: 0}
+  MeterFood: {fileID: 114430206270598006, guid: d4560bf711e05c1499570c05ce2ec545,
+    type: 2}
+  MeterInteraction: {fileID: 114051484036598110, guid: 2cadedd9747cd6545a1ce7cef97a781d,
+    type: 2}
 --- !u!212 &212325199970467314
 SpriteRenderer:
   m_ObjectHideFlags: 1

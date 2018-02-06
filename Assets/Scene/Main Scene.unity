@@ -199,12 +199,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224825075176576260, guid: 2cadedd9747cd6545a1ce7cef97a781d,
     type: 2}
   m_PrefabInternal: {fileID: 1868549857}
---- !u!114 &301107035 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114051484036598110, guid: 2cadedd9747cd6545a1ce7cef97a781d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1868549857}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &397614038
 Prefab:
   m_ObjectHideFlags: 0
@@ -250,7 +244,7 @@ Prefab:
     - target: {fileID: 224048421870808578, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224048421870808578, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
@@ -309,12 +303,17 @@ Prefab:
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4560bf711e05c1499570c05ce2ec545, type: 2}
@@ -556,16 +555,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: MeterFood
-      value: 
-      objectReference: {fileID: 1674140309}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: MeterInteraction
-      value: 
-      objectReference: {fileID: 301107035}
     - target: {fileID: 1701486217678396, guid: 94cd2c99a50fc7741879473833355235, type: 2}
       propertyPath: m_Name
       value: Jelly
@@ -578,12 +567,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224048421870808578, guid: d4560bf711e05c1499570c05ce2ec545,
     type: 2}
   m_PrefabInternal: {fileID: 397614038}
---- !u!114 &1674140309 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114430206270598006, guid: d4560bf711e05c1499570c05ce2ec545,
-    type: 2}
-  m_PrefabInternal: {fileID: 397614038}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1868549857
 Prefab:
   m_ObjectHideFlags: 0
@@ -629,7 +612,7 @@ Prefab:
     - target: {fileID: 224825075176576260, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224825075176576260, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
@@ -688,12 +671,17 @@ Prefab:
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cadedd9747cd6545a1ce7cef97a781d, type: 2}
