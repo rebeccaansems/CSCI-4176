@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 301107034}
   - component: {fileID: 301107035}
   m_Layer: 5
-  m_Name: Interaction Bar
+  m_Name: Interaction Meter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1449297403}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
@@ -373,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077438341
 GameObject:
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 1197447088}
   - component: {fileID: 1197447089}
   m_Layer: 5
-  m_Name: Bars Panel
+  m_Name: Meters Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,8 +476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1197447089
 CanvasRenderer:
@@ -878,7 +878,7 @@ RectTransform:
   m_Children:
   - {fileID: 1197447088}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1674140308}
   - component: {fileID: 1674140309}
   m_Layer: 5
-  m_Name: Food Bar
+  m_Name: Food Meter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1521472423}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
@@ -1048,6 +1048,7 @@ GameObject:
   - component: {fileID: 2107743639}
   - component: {fileID: 2107743638}
   - component: {fileID: 2107743640}
+  - component: {fileID: 2107743641}
   m_Layer: 0
   m_Name: Jelly
   m_TagString: Untagged
@@ -1110,7 +1111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2107743640
 Animator:
@@ -1129,3 +1130,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2107743641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2107743637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a426c64f89e826744a1e498ac8db2346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LossFoodPerMinute: 5
+  LossInterPerMinute: 2
+  CurrentFood: 100
+  CurrentInteraction: 100
+  MeterFood: {fileID: 1674140309}
+  MeterInteraction: {fileID: 301107035}
