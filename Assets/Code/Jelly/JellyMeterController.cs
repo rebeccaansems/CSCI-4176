@@ -20,14 +20,20 @@ public class JellyMeterController : MonoBehaviour
 
     public void Start()
     {
+        //Load data from phone's save file
+        CurrentFood = PlayerPrefs.GetFloat("CurrentFood", 100);
+        CurrentInteraction = PlayerPrefs.GetFloat("CurrentInteraction", 100);
+
+        UpdateMetersGraphically();
+
         //Food and interaction meters are updated every THREE seconds while on game main screen
-        StartCoroutine(UpdateMeters());
+        StartCoroutine(UpdateMetersNumerically());
     }
 
 
 
 
-    IEnumerator UpdateMeters()
+    IEnumerator UpdateMetersNumerically()
     {
         while (true)
         {
@@ -36,9 +42,18 @@ public class JellyMeterController : MonoBehaviour
             CurrentFood -= (LossFoodPerMinute / 18);
             CurrentInteraction -= (LossInterPerMinute / 18);
 
-            MeterFood.value = CurrentFood;
-            MeterInteraction.value = CurrentInteraction;
+            //Save current values
+            PlayerPrefs.SetFloat("CurrentFood", CurrentFood);
+            PlayerPrefs.SetFloat("CurrentInteraction", CurrentInteraction);
+
+            UpdateMetersGraphically();
         }
+    }
+
+    private void UpdateMetersGraphically()
+    {
+        MeterFood.value = CurrentFood;
+        MeterInteraction.value = CurrentInteraction;
     }
 
 }
