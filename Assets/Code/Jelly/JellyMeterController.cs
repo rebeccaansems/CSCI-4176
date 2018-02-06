@@ -30,6 +30,8 @@ public class JellyMeterController : MonoBehaviour
         CurrentFood = PlayerPrefs.GetFloat("CurrentFood", 100);
         CurrentInteraction = PlayerPrefs.GetFloat("CurrentInteraction", 100);
 
+        EnsureValuesAreValid();
+
         //Get last time the player closed the app in order to determine what meters should be adjusted too
         if (PlayerPrefs.GetString("LastTimeGameWasOpened", string.Empty) != string.Empty)
         {
@@ -55,6 +57,8 @@ public class JellyMeterController : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentFood", CurrentFood);
             PlayerPrefs.SetFloat("CurrentInteraction", CurrentInteraction);
 
+            EnsureValuesAreValid();
+
             UpdateMetersGraphically();
         }
     }
@@ -66,6 +70,8 @@ public class JellyMeterController : MonoBehaviour
 
         CurrentFood -= (float)(LossFoodPerMinutePaused * minutesNotPlayed);
         CurrentInteraction -= (float)(LossInterPerMinutePaused * minutesNotPlayed);
+
+        EnsureValuesAreValid();
     }
 
     //Update the display of meters showing food/interaction levels
@@ -88,6 +94,20 @@ public class JellyMeterController : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetString("LastTimeGameWasOpened", DateTime.UtcNow.ToString());
+    }
+
+    //Prevent food/interaction from going below 0
+    private void EnsureValuesAreValid()
+    {
+        if (CurrentFood < 0)
+        {
+            CurrentFood = 0;
+        }
+
+        if (CurrentInteraction < 0)
+        {
+            CurrentInteraction = 0;
+        }
     }
 
 }
