@@ -313,7 +313,12 @@ Prefab:
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.003000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 114430206270598006, guid: d4560bf711e05c1499570c05ce2ec545,
+        type: 2}
+      propertyPath: m_Value
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4560bf711e05c1499570c05ce2ec545, type: 2}
@@ -380,6 +385,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048114354 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114051484036598110, guid: 2cadedd9747cd6545a1ce7cef97a781d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1868549857}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1197447087
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +570,21 @@ Prefab:
       propertyPath: m_Name
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: CurrentFood
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: MeterFood
+      value: 
+      objectReference: {fileID: 1698421033}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: MeterInteraction
+      value: 
+      objectReference: {fileID: 1048114354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94cd2c99a50fc7741879473833355235, type: 2}
   m_IsPrefabParent: 0
@@ -567,6 +593,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224048421870808578, guid: d4560bf711e05c1499570c05ce2ec545,
     type: 2}
   m_PrefabInternal: {fileID: 397614038}
+--- !u!114 &1698421033 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114430206270598006, guid: d4560bf711e05c1499570c05ce2ec545,
+    type: 2}
+  m_PrefabInternal: {fileID: 397614038}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1868549857
 Prefab:
   m_ObjectHideFlags: 0
@@ -681,7 +713,7 @@ Prefab:
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.029999971
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cadedd9747cd6545a1ce7cef97a781d, type: 2}
