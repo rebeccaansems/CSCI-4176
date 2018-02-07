@@ -106,7 +106,7 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 7
     m_ConditionEvent: IdleLevel
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}

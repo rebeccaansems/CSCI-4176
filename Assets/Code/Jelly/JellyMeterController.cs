@@ -31,17 +31,14 @@ public class JellyMeterController : MonoBehaviour
         //Load data from phone's save file
         CurrentFood = PlayerPrefs.GetFloat("CurrentFood", 100);
         CurrentInteraction = PlayerPrefs.GetFloat("CurrentInteraction", 100);
-
-        EnsureValuesAreValid();
-
+        
         //Get last time the player closed the app in order to determine what meters should be adjusted too
         if (PlayerPrefs.GetString("LastTimeGameWasOpened", string.Empty) != string.Empty)
         {
             lastTimeGameWasOpened = DateTime.Parse(PlayerPrefs.GetString("LastTimeGameWasOpened", string.Empty));
             UpdateMetersNumericallyPaused();
         }
-
-        UpdateIdleAnimationBasedOnFood();
+        
         UpdateMetersGraphically();
         StartCoroutine(UpdateMetersNumericallyPlaying());
     }
@@ -59,10 +56,7 @@ public class JellyMeterController : MonoBehaviour
             //Save current values
             PlayerPrefs.SetFloat("CurrentFood", CurrentFood);
             PlayerPrefs.SetFloat("CurrentInteraction", CurrentInteraction);
-
-            EnsureValuesAreValid();
-            UpdateIdleAnimationBasedOnFood();
-
+            
             UpdateMetersGraphically();
         }
     }
@@ -75,13 +69,15 @@ public class JellyMeterController : MonoBehaviour
         CurrentFood -= (float)(LossFoodPerMinutePaused * minutesNotPlayed);
         CurrentInteraction -= (float)(LossInterPerMinutePaused * minutesNotPlayed);
 
-        EnsureValuesAreValid();
-        UpdateIdleAnimationBasedOnFood();
+        UpdateMetersGraphically();
     }
 
     //Update the display of meters showing food/interaction levels
     private void UpdateMetersGraphically()
     {
+        EnsureValuesAreValid();
+        UpdateIdleAnimationBasedOnFood();
+
         MeterFood.value = CurrentFood;
         MeterInteraction.value = CurrentInteraction;
     }

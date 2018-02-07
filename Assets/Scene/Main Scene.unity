@@ -313,7 +313,7 @@ Prefab:
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.003000021
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114430206270598006, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
@@ -566,15 +566,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1701486217678396, guid: 94cd2c99a50fc7741879473833355235, type: 2}
-      propertyPath: m_Name
-      value: Jelly
-      objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: CurrentFood
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
         type: 2}
       propertyPath: MeterFood
@@ -585,6 +576,15 @@ Prefab:
       propertyPath: MeterInteraction
       value: 
       objectReference: {fileID: 1048114354}
+    - target: {fileID: 1701486217678396, guid: 94cd2c99a50fc7741879473833355235, type: 2}
+      propertyPath: m_Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: CurrentFood
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94cd2c99a50fc7741879473833355235, type: 2}
   m_IsPrefabParent: 0
@@ -713,7 +713,7 @@ Prefab:
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.029999971
+      value: 0.0022222996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cadedd9747cd6545a1ce7cef97a781d, type: 2}
