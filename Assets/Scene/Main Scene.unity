@@ -303,17 +303,17 @@ Prefab:
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224880326004737978, guid: d4560bf711e05c1499570c05ce2ec545,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4560bf711e05c1499570c05ce2ec545, type: 2}
@@ -523,6 +523,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: IdleLevelsFood.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4645556254344380, guid: 94cd2c99a50fc7741879473833355235, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -558,6 +563,26 @@ Prefab:
     - target: {fileID: 1701486217678396, guid: 94cd2c99a50fc7741879473833355235, type: 2}
       propertyPath: m_Name
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: IdleLevelsFood.Array.data[0]
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: IdleLevelsFood.Array.data[1]
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: IdleLevelsFood.Array.data[2]
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
+        type: 2}
+      propertyPath: IdleLevelsFood.Array.data[3]
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94cd2c99a50fc7741879473833355235, type: 2}
@@ -671,17 +696,17 @@ Prefab:
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224541331470518956, guid: 2cadedd9747cd6545a1ce7cef97a781d,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cadedd9747cd6545a1ce7cef97a781d, type: 2}

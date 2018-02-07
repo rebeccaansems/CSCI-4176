@@ -17,6 +17,8 @@ public class JellyMeterController : MonoBehaviour
     public float LossInterPerMinutePaused;
     [Range(0, 100)]
     public float CurrentFood, CurrentInteraction;
+    [Range(0, 100)]
+    public int[] IdleLevelsFood;
 
     [Header("UI Elements")]
     public Slider MeterFood;
@@ -39,6 +41,7 @@ public class JellyMeterController : MonoBehaviour
             UpdateMetersNumericallyPaused();
         }
 
+        UpdateIdleAnimationBasedOnFood();
         UpdateMetersGraphically();
         StartCoroutine(UpdateMetersNumericallyPlaying());
     }
@@ -58,6 +61,7 @@ public class JellyMeterController : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentInteraction", CurrentInteraction);
 
             EnsureValuesAreValid();
+            UpdateIdleAnimationBasedOnFood();
 
             UpdateMetersGraphically();
         }
@@ -72,6 +76,7 @@ public class JellyMeterController : MonoBehaviour
         CurrentInteraction -= (float)(LossInterPerMinutePaused * minutesNotPlayed);
 
         EnsureValuesAreValid();
+        UpdateIdleAnimationBasedOnFood();
     }
 
     //Update the display of meters showing food/interaction levels
@@ -107,6 +112,18 @@ public class JellyMeterController : MonoBehaviour
         if (CurrentInteraction < 0)
         {
             CurrentInteraction = 0;
+        }
+    }
+
+    //Change idle animation based on food levels
+    private void UpdateIdleAnimationBasedOnFood()
+    {
+        for (int i = 0; i < IdleLevelsFood.Length; i++)
+        {
+            if (CurrentFood >= IdleLevelsFood[i])
+            {
+                this.GetComponent<Animator>().SetInteger("IdleLevel", i);
+            }
         }
     }
 
