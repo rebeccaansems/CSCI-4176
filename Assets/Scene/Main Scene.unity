@@ -523,11 +523,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: IdleLevelsFood.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4645556254344380, guid: 94cd2c99a50fc7741879473833355235, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -563,26 +558,6 @@ Prefab:
     - target: {fileID: 1701486217678396, guid: 94cd2c99a50fc7741879473833355235, type: 2}
       propertyPath: m_Name
       value: Jelly
-      objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: IdleLevelsFood.Array.data[0]
-      value: 85
-      objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: IdleLevelsFood.Array.data[1]
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: IdleLevelsFood.Array.data[2]
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114856229505313612, guid: 94cd2c99a50fc7741879473833355235,
-        type: 2}
-      propertyPath: IdleLevelsFood.Array.data[3]
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94cd2c99a50fc7741879473833355235, type: 2}
