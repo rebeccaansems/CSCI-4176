@@ -123,6 +123,7 @@ public class JellyMeterController : MonoBehaviour
             if (CurrentFood >= IdleLevelsFood[i])
             {
                 this.GetComponent<Animator>().SetInteger("IdleLevel", i);
+                i = IdleLevelsFood.Length;
             }
         }
     }
