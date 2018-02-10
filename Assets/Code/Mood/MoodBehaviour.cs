@@ -11,13 +11,14 @@ public class MoodBehaviour : MonoBehaviour {
 	public GameObject moodTwo;
 	public GameObject moodThree;
 	public GameObject moodFour;
+	public GameObject moodFive;
 	public GameObject[] moods;
 
 	public float notSelected, selected;
 
 	void Start()
 	{
-		moods = new GameObject[] {moodOne, moodTwo, moodThree, moodFour};
+		moods = new GameObject[] {moodOne, moodTwo, moodThree, moodFour, moodFive};
 		notSelected = 0.2f;
 		selected = 1.0f;
 	}
