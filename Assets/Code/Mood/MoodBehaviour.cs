@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoodBehaviour : MonoBehaviour {
 	[Range(0, 4)]
 	public int currentMood;
-	// Use this for initialization
+	// Initalizing mood Objects
 	public GameObject moodOne;
 	public GameObject moodTwo;
 	public GameObject moodThree;
@@ -14,6 +14,7 @@ public class MoodBehaviour : MonoBehaviour {
 	public GameObject moodFive;
 	public GameObject[] moods;
 
+	// Opacities of selected and not selected mood sprites
 	public float notSelected, selected;
 
 	void Start()
@@ -27,18 +28,21 @@ public class MoodBehaviour : MonoBehaviour {
 	void Update () {
 		// https://forum.unity.com/threads/touching-a-2d-sprite.233483/ code used for clicking on certain sprites *bless*
 		if (Input.GetMouseButtonDown (0)) {
+			// Check where the mouse (or touch) occurred 
 			Vector2 pos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 			RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(pos), Vector2.zero);
 			// RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
 			if (hitInfo) {
+				// Get the gameObject that was tapped
 				GameObject selectedMood = hitInfo.transform.gameObject;
+				// Change the current mood and opacities of other moods
 				selectMood (selectedMood);
 			}
 		}
 	}
 
 	void selectMood(GameObject mood) {
-		// Change opacity based on whether its selected or not
+		// Change opacity based on whether that mood is selected or not
 
 		// https://stackoverflow.com/questions/32415545/how-can-i-decrease-opacity-in-unity
 		// Code for changing opacity ^^
