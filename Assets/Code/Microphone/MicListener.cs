@@ -53,7 +53,7 @@ public class MicListener : MonoBehaviour
         float[] samples = GetAudioSamples(audioSource);
         //Get their average volume
         float average = AverageVolume(samples);
-
+        
         //TODO: Find a good threshold to detect input
         if (average > 0.001F)
         {
