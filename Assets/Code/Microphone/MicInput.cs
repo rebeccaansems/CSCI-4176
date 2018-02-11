@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 //Streams microphone data through an AudioSource component, based on implementation from (which was purchased):
 //https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866

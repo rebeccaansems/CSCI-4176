@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MicListener : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class MicListener : MonoBehaviour
     public List<AudioSource> audioSources;
     //When debug is true shows values read from mic
     public bool debug = false;
-    //Ignore any input volume below threshold
-    public float micVolumeThreshold = .1f;
     //When the user blows in the mic we are going to make Jelly Pal float
     public GameObject jellyPal;
 
@@ -56,7 +55,7 @@ public class MicListener : MonoBehaviour
         float average = AverageVolume(samples);
 
         //TODO: Find a good threshold to detect input
-        if(average > 0F)
+        if (average > 0.001F)
         {
             if (debug)
             {
@@ -65,11 +64,11 @@ public class MicListener : MonoBehaviour
             //Float up Jelly
             //TODO: Dont float out of the screen
             //Translate(x, y, z, Space relativeTo)
-            jellyPal.transform.Translate(0F, 0.01F, 0F);
+            jellyPal.transform.Translate(0F, 0.05F, 0F);
         } else
         {
             //Sink back down
-            if(jellyPal.transform.position.y > baseLevel)
+            if (jellyPal.transform.position.y > baseLevel)
             {
                 jellyPal.transform.Translate(0F, -0.01F, 0F);
             }
@@ -82,9 +81,9 @@ public class MicListener : MonoBehaviour
         //Get the samples
         float[] samples = audioSources[audioSourceIndex].GetOutputData(samplesToTake, 0);
         //Normalize the samples
-        float[] normSamples = NormalizeArray(samples);
+        //float[] normSamples = NormalizeArray(samples);
 
-        return normSamples;
+        return samples;
     }
 
     //Normalize values between 0 and 1 to account for bad readings
