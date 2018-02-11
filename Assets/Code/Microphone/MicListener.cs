@@ -63,7 +63,7 @@ public class MicListener : MonoBehaviour
             }
             //Float up Jelly
             //TODO: Dont float out of the screen
-            //Translate(x, y, z, Space relativeTo)
+            //Translate(x, y, z)
             jellyPal.transform.Translate(0F, 0.05F, 0F);
         } else
         {
