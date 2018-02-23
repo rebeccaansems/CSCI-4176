@@ -26,7 +26,7 @@ public class JellySpeechController : MonoBehaviour
     //Jelly name display
     public GameObject jellyName;
     //UI text
-    public Text speechText;
+    public Text speechText, nameText;
 
     //Flag to check if we are running the typing coroutine
     private bool isTyping;
@@ -51,6 +51,9 @@ public class JellySpeechController : MonoBehaviour
 
         //Start dialogue from beginning of list
         StartCoroutine(AnimateText(dialogueTree[0]));
+
+        //change jelly name to be what we named the jelly
+        nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal") + ": ";
     }
 
     void Update()
@@ -64,6 +67,7 @@ public class JellySpeechController : MonoBehaviour
 
     void updateDisplay()
     {
+        nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal")+": ";
         if (isTyping)
         {
             //This causes the animation to stop

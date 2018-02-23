@@ -2154,9 +2154,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 56
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 56
+    m_MaxSize: 100
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2949,6 +2949,7 @@ MonoBehaviour:
   moodInput: {fileID: 233327145}
   jellyName: {fileID: 967237179}
   speechText: {fileID: 2016076581}
+  nameText: {fileID: 1462331879}
 --- !u!1 &1996106497
 GameObject:
   m_ObjectHideFlags: 0
