@@ -59,7 +59,7 @@ public class JellySpeechController : MonoBehaviour
     void Update()
     {
         //Navigate the text using touch controls or left mouse click
-        if (Input.touchCount > 0 && touchEnabled || Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             updateDisplay();
         }
