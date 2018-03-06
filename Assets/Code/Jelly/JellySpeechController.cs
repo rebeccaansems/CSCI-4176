@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class JellySpeechController : MonoBehaviour
 {
-
-    //Different static phrases the jelly can say
-    private readonly string GREETING = "Hi! I am your jelly pal!";
-    private readonly string CHECK_IN = "How are you feeling today?";
-    private readonly string MOOD_RESPONSE_NEUTRAL = "I will add that to your mood calendar.";
+    //Store the next text for the jelly to say in this list
+    public List<DialogueMap.Dialogue> DialogueList;
 
     //touch controls
     private Touch touch;
     private bool touchEnabled;
+
+    //The text portion we're currently at in the text tree
+    public int CurrentDialogueIndex;
 
     //The jelly meters display
     public GameObject metersPanel;
@@ -22,7 +22,7 @@ public class JellySpeechController : MonoBehaviour
     //UI navigation
     public GameObject uiNavigation;
     //Smiley for mood input
-    public GameObject moodInput;
+    public GameObject moodPanel;
     //Jelly name display
     public GameObject jellyName;
     //UI text
@@ -30,82 +30,92 @@ public class JellySpeechController : MonoBehaviour
 
     //Flag to check if we are running the typing coroutine
     private bool isTyping;
-    //Store the next text for the jelly to say in this list
-    private List<string> dialogueTree;
 
-    void Start()
+    private void Start()
     {
-        dialogueTree = new List<string>();
-        //Add some phrases to the dialog tree
-        dialogueTree.Add(GREETING);
-        dialogueTree.Add(CHECK_IN);
-        dialogueTree.Add(MOOD_RESPONSE_NEUTRAL);
         //Hide the meters until the speech is done
         metersPanel.SetActive(false);
         uiNavigation.SetActive(false);
-        moodInput.SetActive(false);
+        moodPanel.SetActive(false);
         jellyName.SetActive(false);
 
         isTyping = false;
         touchEnabled = true;
 
+        CurrentDialogueIndex = 0;
+
         //Start dialogue from beginning of list
-        StartCoroutine(AnimateText(dialogueTree[0]));
+        StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText()));
 
         //change jelly name to be what we named the jelly
         nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal") + ": ";
     }
 
-    void Update()
+    private void Update()
     {
         //Navigate the text using touch controls or left mouse click
         if (Input.GetMouseButtonDown(0))
         {
-            updateDisplay();
+            UpdateDisplay();
         }
     }
 
-    void updateDisplay()
+    private void UpdateDisplay()
     {
-        nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal")+": ";
+        nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal") + ": ";
         if (isTyping)
         {
             //This causes the animation to stop
             isTyping = false;
         }
-        else
+        else if (DialogueList.Count > CurrentDialogueIndex + 1 && DialogueList[CurrentDialogueIndex + 1].WaitForInput == false)
         {
-            //Remove the text that was just used
-            dialogueTree.RemoveAt(0);
-            if (dialogueTree.Count > 0)
+            CurrentDialogueIndex++;
+            if (DialogueList.Count > CurrentDialogueIndex)
             {
-                string nextPrompt = dialogueTree[0];
-
                 //Check for special prompt conditions
-                if (nextPrompt.Equals(CHECK_IN))
+                if (DialogueList[CurrentDialogueIndex].Name == "CHECK IN")
                 {
                     //Show the smileys
-                    moodInput.SetActive(true);
-                }
-                else
-                {
-                    //Make anything that could have been turned on is off now
-                    moodInput.SetActive(false);
-                    // TODO: get the selected mood
+                    moodPanel.SetActive(true);
                 }
 
-                StartCoroutine(AnimateText(nextPrompt));
-
-            }
-            else
-            {
-                //Display the next text or hide the speech box
-                metersPanel.SetActive(true);
-                speechPanel.SetActive(false);
-                uiNavigation.SetActive(true);
-                jellyName.SetActive(true);
+                StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText()));
             }
         }
+        else if (DialogueList.Count <= CurrentDialogueIndex + 1)
+        {
+            ShowMainDisplay();
+        }
+    }
+
+    public void ForceDisplayUpdate()
+    {
+        ForceDisplayUpdate(0);
+    }
+
+    public void ForceDisplayUpdate(int response)
+    {
+        CurrentDialogueIndex++;
+
+        if (DialogueList.Count > CurrentDialogueIndex)
+        {
+            StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText(response)));
+        }
+        else
+        {
+            ShowMainDisplay();
+        }
+    }
+
+    private void ShowMainDisplay()
+    {
+        //Display the next text or hide the speech box
+        metersPanel.SetActive(true);
+        speechPanel.SetActive(false);
+        moodPanel.SetActive(false);
+        uiNavigation.SetActive(true);
+        jellyName.SetActive(true);
     }
 
     //Animate text from: https://answers.unity.com/questions/219281/making-text-boxes-with-letters-appearing-one-at-a.html
