@@ -110,6 +110,7 @@ public class JellyMeterController : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        SendNotifications();
         PlayerPrefs.SetString("LastTimeGameWasOpened", DateTime.UtcNow.ToString());
     }
 
