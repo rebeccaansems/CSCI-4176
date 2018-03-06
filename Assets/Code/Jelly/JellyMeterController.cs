@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.SimpleAndroidNotifications;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -80,6 +81,21 @@ public class JellyMeterController : MonoBehaviour
 
         MeterFood.value = CurrentFood;
         MeterInteraction.value = CurrentInteraction;
+    }
+
+    //Calculate how long until meters are empty and schedule notification to go then
+    private void SendNotifications()
+    {
+        double minutesUntilEmptyFood = (-CurrentFood) / LossFoodPerMinutePaused;
+        double minutesUntilEmptyInteraction = (-CurrentInteraction) / LossInterPerMinutePaused;
+
+        NotificationManager.SendWithAppIcon(TimeSpan.FromMinutes(minutesUntilEmptyFood), "Jelly Friend Needs Food",
+            string.Format("{0} is getting awfully hungry, don't forget to feed them!", PlayerPrefs.GetString("jellyName", "Jelly Pal")),
+            Color.yellow);
+
+        NotificationManager.SendWithAppIcon(TimeSpan.FromMinutes(minutesUntilEmptyInteraction), "Jelly Friend Needs Interaction",
+            string.Format("{0} is getting awfully lonely, don't forget to talk to them!", PlayerPrefs.GetString("jellyName", "Jelly Pal")),
+            Color.yellow);
     }
 
 #if !UNITY_EDITOR
