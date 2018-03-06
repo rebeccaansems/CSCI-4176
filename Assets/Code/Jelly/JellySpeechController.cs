@@ -94,12 +94,18 @@ public class JellySpeechController : MonoBehaviour
         ForceDisplayUpdate(0);
     }
 
+    //Forces display to update, includes the ability to select a specfic response according to user input
     public void ForceDisplayUpdate(int response)
     {
         CurrentDialogueIndex++;
 
         if (DialogueList.Count > CurrentDialogueIndex)
         {
+            if (DialogueList[CurrentDialogueIndex].Name == "ADD TO MOOD CALENDAR")
+            {
+                moodPanel.SetActive(false);
+            }
+
             StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText(response)));
         }
         else
@@ -113,7 +119,6 @@ public class JellySpeechController : MonoBehaviour
         //Display the next text or hide the speech box
         metersPanel.SetActive(true);
         speechPanel.SetActive(false);
-        moodPanel.SetActive(false);
         uiNavigation.SetActive(true);
         jellyName.SetActive(true);
     }
