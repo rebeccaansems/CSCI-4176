@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class JellySpeechController : MonoBehaviour
 {
+    //prevent text from showing multiple times in one session
+    private static bool k_OpeningSpeechShown;
+
     //Store the next text for the jelly to say in this list
     public List<DialogueMap.Dialogue> DialogueList;
 
@@ -33,28 +36,37 @@ public class JellySpeechController : MonoBehaviour
 
     private void Start()
     {
-        //Hide the meters until the speech is done
-        metersPanel.SetActive(false);
-        uiNavigation.SetActive(false);
-        moodPanel.SetActive(false);
-        jellyName.SetActive(false);
+        if (k_OpeningSpeechShown == false)
+        {
+            k_OpeningSpeechShown = true;
 
-        isTyping = false;
-        touchEnabled = true;
+            //Hide the meters until the speech is done
+            metersPanel.SetActive(false);
+            uiNavigation.SetActive(false);
+            moodPanel.SetActive(false);
+            jellyName.SetActive(false);
 
-        CurrentDialogueIndex = 0;
+            isTyping = false;
+            touchEnabled = true;
 
-        //Start dialogue from beginning of list
-        StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText()));
+            CurrentDialogueIndex = 0;
 
-        //change jelly name to be what we named the jelly
-        nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal") + ": ";
+            //Start dialogue from beginning of list
+            StartCoroutine(AnimateText(DialogueList[CurrentDialogueIndex].GetText()));
+
+            //change jelly name to be what we named the jelly
+            nameText.text = PlayerPrefs.GetString("jellyName", "Jelly Pal") + ": ";
+        }
+        else
+        {
+            ShowMainDisplay();
+        }
     }
 
     private void Update()
     {
         //Navigate the text using touch controls or left mouse click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && k_OpeningSpeechShown)
         {
             UpdateDisplay();
         }
