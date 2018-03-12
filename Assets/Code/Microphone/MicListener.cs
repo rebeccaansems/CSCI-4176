@@ -12,7 +12,7 @@ public class MicListener : MonoBehaviour
     public List<AudioSource> audioSources;
     //When debug is true shows values read from mic
     public bool debug = false;
-    //Bubble that blow when mic is active
+    //Bubbles that blow when mic is active
     public ParticleSystem bubbles;
     //When the user blows in the mic we are going to make Jelly Pal float
     public GameObject jellyPal;
@@ -23,7 +23,7 @@ public class MicListener : MonoBehaviour
     private int audioSource = 0;
     //Float the Jelly no lower than its original position
     private double baseLevel;
-    //Only show animation for 5 seconds after mic input detected
+    //Only show animation for 1 second after mic input detected
     private float bubbleTime = 0.0f;
 
     void Start()
