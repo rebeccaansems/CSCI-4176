@@ -55,16 +55,13 @@ public class MicListener : MonoBehaviour
         float average = AverageVolume(samples);
         
         //TODO: Find a good threshold to detect input
-        if (average > 0.001F)
+        if (average > 0.003F)
         {
-            if (debug)
+            if (isVisible(jellyPal))
             {
-                Debug.Log("Mic hot: " + average);
+                //Float Jelly up
+                jellyPal.transform.Translate(0F, 0.05F, 0F);
             }
-            //Float up Jelly
-            //TODO: Dont float out of the screen
-            //Translate(x, y, z)
-            jellyPal.transform.Translate(0F, 0.05F, 0F);
         } else
         {
             //Sink back down
@@ -80,9 +77,6 @@ public class MicListener : MonoBehaviour
     {
         //Get the samples
         float[] samples = audioSources[audioSourceIndex].GetOutputData(samplesToTake, 0);
-        //Normalize the samples
-        //float[] normSamples = NormalizeArray(samples);
-
         return samples;
     }
 
@@ -117,6 +111,19 @@ public class MicListener : MonoBehaviour
 
         float ave = total / input.Length;
         return ave;
+    }
+
+    //Make sure the sprite is visible by checking its y pos
+    bool isVisible(GameObject sprite)
+    {
+        int height = Screen.height;
+        float spriteY = Camera.main.WorldToScreenPoint(jellyPal.transform.position).y;
+        if (spriteY < height)
+        {
+            return true;
+        }
+        // not visible on screen
+        return false;
     }
 }
 
