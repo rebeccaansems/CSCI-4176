@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Main Scene.unity
     guid: ade50cbb517c2a64489d5a10d99cb5c3
+  - enabled: 1
+    path: Assets/Scene/Scheduling.unity
+    guid: e21630d9d63ccee4d9636b6ed53f04de
+  - enabled: 1
+    path: Assets/Scene/Panic Attack Scene.unity
+    guid: 9ee2cf20139236848967de88ed8bec49
