@@ -113,6 +113,7 @@ public class MicListener : MonoBehaviour
         return ave;
     }
 
+    //Make sure the sprite is visible by checking its y pos
     bool isVisible(GameObject sprite)
     {
         int height = Screen.height;
