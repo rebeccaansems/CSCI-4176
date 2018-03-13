@@ -24,6 +24,8 @@ public class JellyMeterController : MonoBehaviour
     public Slider MeterFood;
     public Slider MeterInteraction;
 
+    public SpriteRenderer OpenMouth, ClosedMouth;
+
     private DateTime lastTimeGameWasOpened;
 
     public void Start()
@@ -31,14 +33,14 @@ public class JellyMeterController : MonoBehaviour
         //Load data from phone's save file
         CurrentFood = PlayerPrefs.GetFloat("CurrentFood", 100);
         CurrentInteraction = PlayerPrefs.GetFloat("CurrentInteraction", 100);
-        
+
         //Get last time the player closed the app in order to determine what meters should be adjusted too
         if (PlayerPrefs.GetString("LastTimeGameWasOpened", string.Empty) != string.Empty)
         {
             lastTimeGameWasOpened = DateTime.Parse(PlayerPrefs.GetString("LastTimeGameWasOpened", string.Empty));
             UpdateMetersNumericallyPaused();
         }
-        
+
         UpdateMetersGraphically();
         StartCoroutine(UpdateMetersNumericallyPlaying());
     }
@@ -56,7 +58,14 @@ public class JellyMeterController : MonoBehaviour
             //Save current values
             PlayerPrefs.SetFloat("CurrentFood", CurrentFood);
             PlayerPrefs.SetFloat("CurrentInteraction", CurrentInteraction);
-            
+
+            //close mouth if open
+            if (OpenMouth.enabled == true)
+            {
+                ClosedMouth.enabled = true;
+                OpenMouth.enabled = false;
+            }
+
             UpdateMetersGraphically();
         }
     }
@@ -97,18 +106,11 @@ public class JellyMeterController : MonoBehaviour
         PlayerPrefs.SetString("LastTimeGameWasOpened", DateTime.UtcNow.ToString());
     }
 
-    //Prevent food/interaction from going below 0
+    //Prevent food/interaction from going below 0 or above 100
     private void EnsureValuesAreValid()
     {
-        if (CurrentFood < 0)
-        {
-            CurrentFood = 0;
-        }
-
-        if (CurrentInteraction < 0)
-        {
-            CurrentInteraction = 0;
-        }
+        CurrentFood = Mathf.Clamp(CurrentFood, 0, 100);
+        CurrentInteraction = Mathf.Clamp(CurrentInteraction, 0, 100);
     }
 
     //Change idle animation based on food levels
@@ -122,6 +124,24 @@ public class JellyMeterController : MonoBehaviour
                 i = IdleLevelsFood.Length;
             }
         }
+    }
+
+    //increase food levels of Jelly
+    public void FeedJelly()
+    {
+        CurrentFood += 25;
+        UpdateMetersGraphically();
+
+        //open mouth
+        ClosedMouth.enabled = false;
+        OpenMouth.enabled = true;
+    }
+
+    //increase interaction levels of Jelly
+    public void TalkToJelly()
+    {
+        CurrentInteraction += 25;
+        UpdateMetersGraphically();
     }
 
 }
