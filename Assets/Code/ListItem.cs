@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ListItem : MonoBehaviour {
 
-    public Button item;
     public Button remove;
     public Text description;
     public Text date;
@@ -13,11 +12,17 @@ public class ListItem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
 
-    public void Setup()
+    }
+
+    /*
+     * Set the text items in a single listItem
+     */
+    public void Setup(string item, string itemDate, string itemTime)
     {
+        description.text = item;
+        date.text = itemDate;
+        time.text = itemTime;
 
     }
 
