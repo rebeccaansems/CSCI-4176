@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 114419432829566058}
   - component: {fileID: 114236426503437586}
   - component: {fileID: 114464858598777064}
+  - component: {fileID: 114887056336816466}
   m_Layer: 5
   m_Name: List Item Button
   m_TagString: Untagged
@@ -403,6 +404,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114887056336816466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892616186449212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b316386fcdb8cdb4aa3d395a198c1c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 114236426503437586}
+  remove: {fileID: 114882514228599834}
+  description: {fileID: 114555031994003462}
+  date: {fileID: 114137457816885958}
+  time: {fileID: 114761044352384610}
 --- !u!222 &222144065700374644
 CanvasRenderer:
   m_ObjectHideFlags: 1

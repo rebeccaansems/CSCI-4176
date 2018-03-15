@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ListItem : MonoBehaviour {
 
+    public Button item;
     public Button remove;
     public Text description;
     public Text date;
