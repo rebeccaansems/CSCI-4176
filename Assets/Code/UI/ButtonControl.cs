@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/**
+ * Referenced from https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
