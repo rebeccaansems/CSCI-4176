@@ -6,10 +6,15 @@ public class ButtonControl : MonoBehaviour {
 
 	GameObject[] gameObjectArray1;
 	GameObject[] gameObjectArray2;
+	GameObject tmpObject;
+
+	Transform[] allChildren;
 
 	void Start() {
 		gameObjectArray1 = GameObject.FindGameObjectsWithTag ("Buttons");
-		gameObjectArray2 = GameObject.FindGameObjectsWithTag ("Extra_Buttons");
+		tmpObject = GameObject.FindGameObjectWithTag ("TestButtons");
+		allChildren = tmpObject.GetComponentsInChildren<Transform>(true);
+
 	}
 
 	public void ChangeButton(bool buttonGroup) 
@@ -18,17 +23,20 @@ public class ButtonControl : MonoBehaviour {
 			foreach (GameObject go in gameObjectArray1) {
 				go.SetActive (false);
 			}
-			foreach (GameObject go in gameObjectArray2) {
-				go.SetActive (true);
-			}
+			foreach (Transform child in allChildren) {
+				child.gameObject.SetActive (true);
+			} 
+
 		}
+
 		else {
 			foreach (GameObject go in gameObjectArray1) {
 				go.SetActive (true);
 			}
-			foreach (GameObject go in gameObjectArray2) {
-				go.SetActive (false);
+			foreach (Transform child in allChildren) {
+				child.gameObject.SetActive (false);
 			}
 		}
 	}
+		
 }
