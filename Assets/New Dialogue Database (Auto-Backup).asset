@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1097633651, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: New Dialogue Database
+  m_Name: New Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -80,7 +80,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Title
-      value: Something on your mind?
+      value: New Conversation 1
       type: 0
       typeString: 
     - title: Pictures
@@ -218,9 +218,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Hey! Thanks for chatting with me!
-
-          Is there anything on your mind?'
+        value: Hey! Thanks for chatting with me!\nIs there anything on your mind?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -347,8 +345,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 188.0257
-        y: 267.67258
+        x: 180
+        y: 120
         width: 160
         height: 30
     - id: 3
@@ -404,13 +402,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 3
-        destinationConversationID: 1
-        destinationDialogueID: 27
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -493,8 +485,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1148.0256
-        y: 267.67258
+        x: 1140
+        y: 120
         width: 160
         height: 30
     - id: 5
@@ -590,8 +582,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 188.0257
-        y: 317.67258
+        x: 300
+        y: 170
         width: 160
         height: 30
     - id: 6
@@ -663,8 +655,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 38.025696
-        y: 367.67258
+        x: 30
+        y: 220
         width: 160
         height: 30
     - id: 7
@@ -736,8 +728,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 218.0257
-        y: 367.67258
+        x: 210
+        y: 220
         width: 160
         height: 30
     - id: 8
@@ -809,8 +801,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 398.0257
-        y: 367.67258
+        x: 390
+        y: 220
         width: 160
         height: 30
     - id: 9
@@ -882,8 +874,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 578.0257
-        y: 367.67258
+        x: 570
+        y: 220
         width: 160
         height: 30
     - id: 10
@@ -955,8 +947,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 758.0257
-        y: 367.67258
+        x: 750
+        y: 220
         width: 160
         height: 30
     - id: 11
@@ -1040,8 +1032,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1148.0256
-        y: 317.67258
+        x: 1020
+        y: 170
         width: 160
         height: 30
     - id: 12
@@ -1113,8 +1105,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 938.0257
-        y: 367.67258
+        x: 930
+        y: 220
         width: 160
         height: 30
     - id: 13
@@ -1186,8 +1178,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1118.0256
-        y: 367.67258
+        x: 1110
+        y: 220
         width: 160
         height: 30
     - id: 14
@@ -1261,8 +1253,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1298.0256
-        y: 367.67258
+        x: 1290
+        y: 220
         width: 160
         height: 30
     - id: 15
@@ -1328,8 +1320,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 38.025696
-        y: 417.67258
+        x: 30
+        y: 270
         width: 160
         height: 30
     - id: 16
@@ -1395,8 +1387,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 218.0257
-        y: 417.67258
+        x: 210
+        y: 270
         width: 160
         height: 30
     - id: 17
@@ -1475,8 +1467,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 398.0257
-        y: 417.67258
+        x: 390
+        y: 270
         width: 160
         height: 30
     - id: 18
@@ -1548,8 +1540,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 308.0257
-        y: 467.67258
+        x: 300
+        y: 320
         width: 160
         height: 30
     - id: 19
@@ -1621,8 +1613,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1028.0256
-        y: 467.67258
+        x: 1020
+        y: 320
         width: 160
         height: 30
     - id: 20
@@ -1700,8 +1692,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 578.0257
-        y: 417.67258
+        x: 570
+        y: 270
         width: 160
         height: 30
     - id: 21
@@ -1768,8 +1760,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 758.0257
-        y: 417.67258
+        x: 750
+        y: 270
         width: 160
         height: 30
     - id: 22
@@ -1835,8 +1827,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 938.0257
-        y: 417.67258
+        x: 930
+        y: 270
         width: 160
         height: 30
     - id: 23
@@ -1902,8 +1894,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1118.0256
-        y: 417.67258
+        x: 1110
+        y: 270
         width: 160
         height: 30
     - id: 24
@@ -1969,8 +1961,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1298.0256
-        y: 417.67258
+        x: 1290
+        y: 270
         width: 160
         height: 30
     - id: 25
@@ -2036,8 +2028,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 308.0257
-        y: 517.6726
+        x: 300
+        y: 370
         width: 160
         height: 30
     - id: 26
@@ -2104,93 +2096,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1028.0256
-        y: 517.6726
+        x: 1020
+        y: 370
         width: 160
         height: 30
-    - id: 27
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: Bad kind of?
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Oh yeah? Is it a bad kind of?
-
-'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 27
-        destinationConversationID: 1
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 27
-        destinationConversationID: 1
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 658.39484
-        y: 184.44623
-        width: 160
-        height: 30
-    canvasScrollPosition: {x: 33.59155, y: 0}
-    canvasZoom: 0.6229999
+    canvasScrollPosition: {x: 128.98747, y: 100.449356}
+    canvasZoom: 0.52000016
   - id: 2
     fields:
     - title: Title

@@ -11,6 +11,7 @@ public class NameController : MonoBehaviour {
 	public CanvasGroup inputCanvas;
 	public string jellyName;
 	public bool allowEnter;
+
 	// Use this for initialization
 	void Start () {
 		Button editBtn = editButton.GetComponent<Button>();
