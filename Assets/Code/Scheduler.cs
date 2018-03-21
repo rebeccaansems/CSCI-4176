@@ -42,7 +42,7 @@ public class Scheduler : MonoBehaviour {
         newItem = Instantiate(newItem) as GameObject;
         ListItem parts = newItem.GetComponent<ListItem>();
         parts.Setup(item, date, time);
-        newItem.transform.SetParent(scrollView.transform);
+        newItem.transform.SetParent(scrollView.transform, false);
         newItem.SetActive(true);
 
 
