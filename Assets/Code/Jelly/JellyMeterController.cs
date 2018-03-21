@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PixelCrushers.DialogueSystem;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,9 +25,15 @@ public class JellyMeterController : MonoBehaviour
     public Slider MeterFood;
     public Slider MeterInteraction;
 
+    public CanvasGroup AllNonDialogueUI;
+
     public SpriteRenderer OpenMouth, ClosedMouth;
 
+    //last time the player opened the app
     private DateTime lastTimeGameWasOpened;
+
+    //is the player currently having a conversation with jelly
+    private bool conversationActive = false;
 
     public void Start()
     {
@@ -140,8 +147,42 @@ public class JellyMeterController : MonoBehaviour
     //increase interaction levels of Jelly
     public void TalkToJelly()
     {
-        CurrentInteraction += 25;
-        UpdateMetersGraphically();
+        //conversation has not already started
+        if (!conversationActive)
+        {
+            //set jelly name in text
+            this.GetComponent<OverrideActorName>().overrideName = PlayerPrefs.GetString("jellyName", "Jelly Pal");
+
+            //conversation has started
+            conversationActive = true;
+
+            //close all non dialogue UI
+            AllNonDialogueUI.alpha = 0;
+            AllNonDialogueUI.interactable = false;
+            AllNonDialogueUI.blocksRaycasts = false;
+
+            //start conversation
+            DialogueManager.StartConversation("Something on your mind?");
+        }
+    }
+
+    private void Update()
+    {
+        //conversation has been started but is actually done
+        if (conversationActive && DialogueManager.IsConversationActive == false)
+        {
+            //conversation has finished
+            conversationActive = false;
+
+            //show all non dialogue UI
+            AllNonDialogueUI.alpha = 1;
+            AllNonDialogueUI.interactable = true;
+            AllNonDialogueUI.blocksRaycasts = true;
+
+            //increase interaction meter
+            CurrentInteraction += 25;
+            UpdateMetersGraphically();
+        }
     }
 
 }
