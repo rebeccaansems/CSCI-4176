@@ -1,8 +1,10 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
-public class SongPlayer : MonoBehaviour {
+public class SongPlayer : MonoBehaviour
+{
 
     // Stores the song to be played
     public AudioClip audioClip;
@@ -21,8 +23,9 @@ public class SongPlayer : MonoBehaviour {
     // TODO: Replace with list of times to spawn beats
     private int previousBeatSpawned = 0;
     private int beatNum;
-    
-    void Start () {
+
+    void Start()
+    {
         // Song being used currently is 85bpm
         bpm = 85.0f;
         // seconds per beat https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php
@@ -36,25 +39,23 @@ public class SongPlayer : MonoBehaviour {
         audio.Play();
         //TODO: Need to set sample rate? https://docs.unity3d.com/ScriptReference/AudioSource.Play.html
     }
-    
-    void Update () {
-        //TODO: Show a moving beat display to let the user know when to tap
-        //TODO: Track the time tapped on the beat and track score
-        
+
+    void Update()
+    {
         trackTime = (float)(AudioSettings.dspTime - startTime);
+        // Debug.Log(trackTime);
 
         // Find which beat we are on
         beatTime = trackTime / spb;
-        beatNum = (int) Math.Floor(trackTime / spb);
+        beatNum = (int)Math.Floor(trackTime / spb);
 
         // For debug display on beat, some beats does not show, probably due to update too fast
         if (beatNum > previousBeat)
         {
-            //Debug.Log(beatNum);
             previousBeat = beatNum;
 
-            // Currently clicking on every second beat
-            if (beatNum > previousBeatSpawned)
+            // Currently clicking on every beat
+            // if (beatNum > previousBeatSpawned)
             {
                 beatNote.songBeatPosition = beatNum + 1;
                 beatNote.beatInitAdvance = 1;
