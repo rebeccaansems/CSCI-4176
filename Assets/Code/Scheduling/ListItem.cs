@@ -10,20 +10,19 @@ public class ListItem : MonoBehaviour {
     public Text date;
     public Text time;
 
-	// Use this for initialization
-	void Start () {
-
-    }
-
     /*
      * Set the text items in a single listItem
      */
-    public void Setup(string item, string itemDate, string itemTime)
-    {
+    public void Setup(string item, string itemDate, string itemTime){
+
         description.text = item;
         date.text = itemDate;
         time.text = itemTime;
-
     }
 
+    // Remove any listeners upon destorying a ListItem object
+    public void OnDestroy()
+    {
+        remove.onClick.RemoveAllListeners();
+    }
 }
