@@ -25,6 +25,7 @@ public class Scheduler : MonoBehaviour {
         hourOptions = hour.GetComponent<Dropdown>().options;
         minuteOptions = minutes.GetComponent<Dropdown>().options;
         amPmOptions = amPm.GetComponent<Dropdown>().options;
+        description.characterLimit = 30;
     }
 
     /*
@@ -46,7 +47,7 @@ public class Scheduler : MonoBehaviour {
             date += monthText + " ";
         }
         if(!(dayText == "Select Day")){
-            date += dayText + ",";
+            date += dayText + ", ";
         }
         if(!(yearText == "Select Year")){
             date += yearText;
