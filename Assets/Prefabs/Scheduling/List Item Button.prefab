@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 222610708700455140}
   - component: {fileID: 114534556967611144}
   - component: {fileID: 114882514228599834}
+  - component: {fileID: 114882140102560628}
   m_Layer: 5
   m_Name: Delete
   m_TagString: Untagged
@@ -363,6 +364,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Time
+--- !u!114 &114882140102560628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491781902118872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a070a63e7adfc469bd90497a6d0734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remove: {fileID: 114882514228599834}
+  selectedItem: {fileID: 1892616186449212}
 --- !u!114 &114882514228599834
 MonoBehaviour:
   m_ObjectHideFlags: 1

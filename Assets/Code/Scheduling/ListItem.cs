@@ -9,7 +9,9 @@ public class ListItem : MonoBehaviour {
     public Text description;
     public Text date;
     public Text time;
+    //public GameObject selectedItem;
 
+    //public static GameObject selectedItem = null;
 	// Use this for initialization
 	void Start () {
 
@@ -20,10 +22,21 @@ public class ListItem : MonoBehaviour {
      */
     public void Setup(string item, string itemDate, string itemTime)
     {
+
         description.text = item;
         date.text = itemDate;
         time.text = itemTime;
+        //remove.onClick.AddListener(() => Destroy(gameObject));
 
     }
 
+    public void OnMouseUpAsButton()
+    {
+        //selectedItem = gameObject;
+    }
+
+    public void OnDestroy()
+    {
+        remove.onClick.RemoveAllListeners();
+    }
 }

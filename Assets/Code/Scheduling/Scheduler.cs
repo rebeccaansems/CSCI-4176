@@ -14,6 +14,7 @@ public class Scheduler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        
         monthOptions = month.GetComponent<Dropdown>().options;
         dayOptions = day.GetComponent<Dropdown>().options;
         yearOptions = year.GetComponent<Dropdown>().options;
@@ -38,15 +39,13 @@ public class Scheduler : MonoBehaviour {
         //ToDO: Remove once object is being added to scroll view correctly
         description.text = item + " " + date + " " + time;
 
-        //This part is not working correctly
-        newItem = Instantiate(newItem) as GameObject;
-        ListItem parts = newItem.GetComponent<ListItem>();
+        GameObject itemToAdd = Instantiate(newItem) as GameObject;
+        ListItem parts = itemToAdd.GetComponent<ListItem>();
         parts.Setup(item, date, time);
-        newItem.transform.SetParent(scrollView.transform, false);
-        newItem.SetActive(true);
-
-
-
+        itemToAdd.transform.SetParent(scrollView.transform, false);
+        itemToAdd.SetActive(true);
 
     }
+
+    
 }
