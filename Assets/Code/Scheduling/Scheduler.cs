@@ -30,14 +30,39 @@ public class Scheduler : MonoBehaviour {
 
     public void addItem()
     {
-        string item, date, time;
-        description.text = "";
+        string item = null, date = null, time = null;
+        string monthText, dayText, yearText, hourText, minutesText, amPmText;
         item = description.text;
-        date = monthOptions[month.GetComponent<Dropdown>().value].text + " " + dayOptions[day.GetComponent<Dropdown>().value].text + "," + yearOptions[year.GetComponent<Dropdown>().value].text;
-        time = hourOptions[hour.GetComponent<Dropdown>().value].text + ":" + minuteOptions[minutes.GetComponent<Dropdown>().value].text + " " + amPmOptions[amPm.GetComponent<Dropdown>().value].text;
-        
-        //ToDO: Remove once object is being added to scroll view correctly
-        description.text = item + " " + date + " " + time;
+        monthText = monthOptions[month.GetComponent<Dropdown>().value].text;
+        dayText = dayOptions[day.GetComponent<Dropdown>().value].text;
+        yearText = yearOptions[year.GetComponent<Dropdown>().value].text;
+        if(!(monthText == "Select Month"))
+        {
+            date += monthText + " ";
+        }
+        if(!(dayText == "Select Day"))
+        {
+            date += dayText + ",";
+        }
+        if(!(yearText == "Select Year"))
+        {
+            date += yearText;
+        }
+        hourText = hourOptions[hour.GetComponent<Dropdown>().value].text;
+        minutesText = minuteOptions[minutes.GetComponent<Dropdown>().value].text;
+        amPmText = amPmOptions[amPm.GetComponent<Dropdown>().value].text;
+        if(!(hourText == "Select Hour"))
+        {
+            time += hourText + ":";
+        }
+        if(!(minutesText == "Select Minutes"))
+        {
+            time += minutesText + " ";
+        }
+        if(!(amPmText == "Select AM/PM"))
+        {
+            time += amPmText;
+        }
 
         GameObject itemToAdd = Instantiate(newItem) as GameObject;
         ListItem parts = itemToAdd.GetComponent<ListItem>();
