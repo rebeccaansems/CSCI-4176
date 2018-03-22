@@ -12,16 +12,8 @@ public class DeleteButton : UIBehaviour
     private GameObject selectedItem;
 
 	// Use this for initialization
-	public void Awake () {
+	public void Start () {
         remove.onClick.AddListener(() => Destroy(selectedItem));
-		
-	}
-    public void OnDestroy()
-    {
-        remove.onClick.RemoveAllListeners();
-    }
-    // Update is called once per frame
-    void Update () {
 		
 	}
 }
