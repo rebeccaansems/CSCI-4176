@@ -13,6 +13,7 @@ public class SongPlayer : MonoBehaviour
     public static float beatTime;
     public GameObject welcomePanel;
     public GameObject gameOverPanel;
+    public GameObject hitLine;
     public Text endScoreDisplay;
     public Text score;
 
@@ -36,6 +37,7 @@ public class SongPlayer : MonoBehaviour
     public void StartPlay()
     {
         welcomePanel.SetActive(false);
+        hitLine.SetActive(true);
         playing = true;
         AudioSource audio = GetComponent<AudioSource>();
         audio.clip = audioClip;
@@ -54,6 +56,7 @@ public class SongPlayer : MonoBehaviour
         playing = false;
         welcomePanel.SetActive(true);
         gameOverPanel.SetActive(false);
+        hitLine.SetActive(false);
     }
 
     void Update()
@@ -111,5 +114,6 @@ public class SongPlayer : MonoBehaviour
         playing = false;
         endScoreDisplay.text = "Good job!\n You scored " + score.text + " points!";
         gameOverPanel.SetActive(true);
+        hitLine.SetActive(false);
     }
 }

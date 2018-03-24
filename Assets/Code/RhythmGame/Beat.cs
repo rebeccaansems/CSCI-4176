@@ -22,6 +22,7 @@ public class Beat : MonoBehaviour
     // Score to be updated
     private Text score;
     private Text beatFeedback;
+    private ParticleSystem fireworks;
 
     public void ClickedBeat()
     {
@@ -39,8 +40,15 @@ public class Beat : MonoBehaviour
         score = GameObject.Find("Score Amount Text").GetComponent<Text>();
         beatFeedback = GameObject.Find("Feedback Text").GetComponent<Text>();
         transform.SetParent(GameObject.Find("Canvas").transform, false);
-        startPoint = transform.position;
         endPoint = GameObject.Find("Beat Target").transform.position;
+        fireworks = GameObject.Find("Particle Systems").GetComponent<ParticleSystem>();
+
+        // set random position
+        float randomXStart = Random.Range(-2.5f, 2.5f);
+        startPoint = transform.position;
+        startPoint.x = randomXStart;
+        endPoint.x = randomXStart;
+        transform.position = startPoint;
     }
 
     // Update is called once per frame
@@ -69,6 +77,8 @@ public class Beat : MonoBehaviour
         // This will always convert, no need to catch errors
         int currentScore = System.Int32.Parse(score.text);
         int noteScore = 0;
+        // turn off fireworks unless the user gets perfect
+        fireworks.Play(false);
         if (distance > CLOSE)
         {
             noteScore = 5;
@@ -77,6 +87,7 @@ public class Beat : MonoBehaviour
         } else {
             // Hit beat
             noteScore = 50;
+            fireworks.Play(true);
         }
         int newScore = currentScore + noteScore;
         // Update the display
