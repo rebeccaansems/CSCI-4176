@@ -32,8 +32,7 @@ public class Beat : MonoBehaviour
         // Remove the beat
         Destroy(gameObject);
     }
-
-    // Use this for initialization
+    
     void Start()
     {
         // find the scoreboard and feedback text on the screen
@@ -50,14 +49,14 @@ public class Beat : MonoBehaviour
         endPoint.x = randomXStart;
         transform.position = startPoint;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         // Remove the beat if it has been missed
         if (SongPlayer.beatTime > (songBeatPosition + BUFFER_TIME))
         {
             beatFeedback.text = "MISS";
+            SongPlayer.missed += 1;
             Destroy(gameObject);
         }
 
@@ -88,6 +87,11 @@ public class Beat : MonoBehaviour
             // Hit beat
             noteScore = 50;
             fireworks.Play(true);
+            // forgive a beat miss
+            if (SongPlayer.missed > 0)
+            {
+                SongPlayer.missed -= 1;
+            }
         }
         int newScore = currentScore + noteScore;
         // Update the display
@@ -101,6 +105,7 @@ public class Beat : MonoBehaviour
         {
             // no score added
             beatFeedback.text = "MISS";
+            SongPlayer.missed += 1;
         }
         else if (distance > CLOSE)
         {
