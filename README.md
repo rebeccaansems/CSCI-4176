@@ -1,6 +1,8 @@
 # Jelly Pal
 Jelly Pal is an interactive friend who lives in your phone and helps manage your mental health. You can talk to your Jelly Pal and feed it, just like a real pet. Jelly Pal even has two games, a rhythm game to distract you and a breathing game to help deal with panic attacks. You can also schedule reminders so that the Jelly Pal will remind you when to take your medication.
 
+![Jelly Pal Home Screen](Screenshots/main_menu.png "The home screen of the Jelly Pal app")
+
 ## Libraries
 Provide a list of **ALL** the libraries you used for your project. Example:
 
@@ -34,22 +36,26 @@ public static int fibonacci(int fibIndex) {
 List all the main features of your application with a brief description of each feature.
 
 ## Final Project Status
-Write a description of the final status of the project. Did you achieve all your goals? What would be the next step for this project (if it were to continue)?
+The final version of our project has achieved all out expected goals. We have some games, some chat functionality, and scheduling. However for this project to be released more work should be done. Jelly Pal would benefit from the interactivity of many of the bonus functionality. The most important next step for the project would be to improve the chat feature to have chatbot functionality. Bonding with the jelly is the key idea this application is built around and improved chatting would benefit that.
 
 #### Minimum Functionality
-- Feature 1 name (Completed)
-- Feature 2 name (Partially Completed)
-- Feature 3 (Not Implemented)
+- Home screen (Completed)
+- Tracking interactions (Completed)
+- Microphone based game (Completed)
+- Basic dialog (Completed)
+- Notifications (Completed)
 
 #### Expected Functionality
-- Feature 1 name (Completed)
-- Feature 2 name (Partially Completed)
-- Feature 3 (Not Implemented)
+- Calendar (Completed)
+- Rhythm game (Completed)
+- Reactions (Completed)
+- Responses (Completed)
 
 #### Bonus Functionality
-- Feature 1 name (Completed)
-- Feature 2 name (Partially Completed)
-- Feature 3 (Not Implemented)
+- Environment effects (Completed)
+- Additional games (Not Implemented)
+- Bluetooth connectivity (Not Implemented)
+- Chatbot level interaction (Not Implemented)
 
 ## Sources
 Use IEEE citation style.
