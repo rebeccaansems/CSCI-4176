@@ -13,7 +13,9 @@ public class Scheduler : MonoBehaviour {
     // Reference to the scroll wview where List Item Button Prefabs are added
     public GameObject scrollView;
     // References to the list of items in each drop down menu
-    List<Dropdown.OptionData> monthOptions, dayOptions, yearOptions, hourOptions, minuteOptions, amPmOptions;
+    public List<Dropdown.OptionData> monthOptions, dayOptions, yearOptions, hourOptions, minuteOptions, amPmOptions;
+    // List of scheduled items
+    public static List<ListItem> savedItems = new List<ListItem>();
     
 
     // Initialize 
@@ -26,6 +28,25 @@ public class Scheduler : MonoBehaviour {
         minuteOptions = minutes.GetComponent<Dropdown>().options;
         amPmOptions = amPm.GetComponent<Dropdown>().options;
         description.characterLimit = 30;
+        
+        // Create a list to keep track of all listitems being added to the scene
+        List<ListItem> newItems = new List<ListItem>();
+        // Loop over all saved list items
+        for (int i = 0; i < savedItems.Count; i++){
+            ListItem saved = savedItems[i];
+            // Create a new GameObject
+            GameObject itemToAdd = Instantiate(newItem) as GameObject;
+            ListItem parts = itemToAdd.GetComponent<ListItem>();
+            // Set the scheduled item's description, date and time based on the saved items values
+            parts.Setup(saved.GetDescription(), saved.GetDate(), saved.GetTime());
+            // Add item to the scrollview list
+            itemToAdd.transform.SetParent(scrollView.transform, false);
+            itemToAdd.SetActive(true);
+            // Add the list item to the new list
+            newItems.Add(parts);
+       }
+       // set the saved items list to the newly generated items list
+       savedItems = newItems;
     }
 
     /*
@@ -74,5 +95,8 @@ public class Scheduler : MonoBehaviour {
         // Add item to the scrollview list
         itemToAdd.transform.SetParent(scrollView.transform, false);
         itemToAdd.SetActive(true);
+        // Add the List item to the list of scheduled items
+        savedItems.Add(parts);
+        
     }
 }

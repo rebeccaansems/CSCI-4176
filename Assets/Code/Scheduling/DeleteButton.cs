@@ -13,7 +13,20 @@ public class DeleteButton : UIBehaviour
 
 	// Use this for initialization
 	public void Start () {
-        remove.onClick.AddListener(() => Destroy(selectedItem));
+        // Listerner for when scheduled item has delete button pressed
+        remove.onClick.AddListener(DestroyItem);
 		
 	}
+
+    public void DestroyItem()
+    {
+        // Get a reference to the list item being removed
+        ListItem parts = selectedItem.GetComponent<ListItem>();
+        // Remove list item from list of saved items
+        Scheduler.savedItems.Remove(parts);
+        // Remove the list item from the scene
+        Destroy(selectedItem);
+        
+
+    }
 }
