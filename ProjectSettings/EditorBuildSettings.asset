@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Panic Attack Scene.unity
     guid: 9ee2cf20139236848967de88ed8bec49
-  - enabled: 0
-    path: Assets/Scene/Rhythm Game.unity
-    guid: a130fb0832f89af4fa5f3838c3bedd1a
   - enabled: 1
     path: Assets/Scene/Rhythm.unity
     guid: 31e7d56491aefc54d9e2242fc6b8de98
