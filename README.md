@@ -1,5 +1,5 @@
-# Project Title
-One paragraph to describe your project. Your description should include the project concept and key features implemented.
+# Jelly Pal
+Jelly Pal is an interactive friend who lives in your phone and helps manage your mental health. You can talk to your Jelly Pal and feed it, just like a real pet. Jelly Pal even has two games, a rhythm game to distract you and a breathing game to help deal with panic attacks. You can also schedule reminders so that the Jelly Pal will remind you when to take your medication.
 
 ## Libraries
 Provide a list of **ALL** the libraries you used for your project. Example:
