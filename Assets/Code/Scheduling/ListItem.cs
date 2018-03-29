@@ -21,8 +21,28 @@ public class ListItem : MonoBehaviour {
     }
 
     // Remove any listeners upon destorying a ListItem object
-    public void OnDestroy()
-    {
+    public void OnDestroy(){
         remove.onClick.RemoveAllListeners();
+    }
+    
+    /*
+     *  Function to get the description text
+     */
+    public string GetDescription(){
+        return this.description.text;
+    }
+
+    /*
+     *  Function to get the date text
+     */
+    public string GetDate(){
+        return this.date.text;
+    }
+
+    /*
+     *  Function to get the time text
+     */
+    public string GetTime(){
+        return this.time.text;
     }
 }
