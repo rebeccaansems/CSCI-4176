@@ -58,14 +58,34 @@ The final version of our project has achieved all out expected goals. We have so
 - Chatbot level interaction (Not Implemented)
 
 ## Sources
-Use IEEE citation style.
-What to include in your project sources:
-- Stock images
-- Design guides
-- Programming tutorials
-- Research material
-- Android libraries
-- Everything listed on the Dalhousie [*Plagiarism and Cheating*](https://www.dal.ca/dept/university_secretariat/academic-integrity/plagiarism-cheating.html)
-- Remember AC/DC *Always Cite / Don't Cheat* (see Lecture 0 for more info)
+[1] “Apple black silhouette with a leaf free icon”, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45](https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45).
 
-[1] "Java (programming language)", En.wikipedia.org, 2018. [Online]. Available: https://en.wikipedia.org/wiki/Java_(programming_language).
+[2] “Comments free icon”, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4](https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4).
+
+[3] RainbowArt, “5000 Flat Buttons Pack”, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251](https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251).
+
+[4] “JELLY SQUASH FREE SPRITES”, GameArt2D.com, 2018. [Online]. Available: [https://www.gameart2d.com/jelly-squash-free-sprites.html](https://www.gameart2d.com/jelly-squash-free-sprites.html).
+
+[5] “God Save Us - Instruments”, www.looperman.com, 2017. [Online]. Available: [https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop](https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop).
+
+[6] Dog Eat Dog Games, “Audio Visualizer”, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866](https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866).
+
+[7] Hippo, "Simple Android Notifications Free”, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626](https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626).
+
+[8] Moonflower Carnivore, "Jiggly Bubble Free”, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236](https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236).
+
+[9] “Hamburger Meal free icon”, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60](https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60).
+
+[10] Grapes, “Another one”, ccmixter.org, 2009. [Online]. Available: [http://ccmixter.org/files/grapes/19168](http://ccmixter.org/files/grapes/19168).
+
+[11] Pixel Crushers, "Dialogue System for Unity”, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672](https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672).
+
+[12] A. Pantera, "Background Night”, opengameart.org, 2015. [Online]. Available: [https://opengameart.org/content/background-night](https://opengameart.org/content/background-night).
+
+[13] FullTiltBoogie, "Starter Particle Pack”, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179](https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179).
+
+[14] Écrivain, "Star”, opengameart.org, 2010. [Online]. Available: [https://opengameart.org/content/star](https://opengameart.org/content/star).
+
+[15] Y. Chao, "Music Syncing in Rhythm Games”, gamasutra.com, 2017. [Online]. Available: [https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php](https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php).
+
+[16] Unity Answers, "Set Objects Child to Active/Inactive(Solved)”, 2015. [Online]. Available: [https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html](https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html).
