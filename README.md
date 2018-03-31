@@ -33,7 +33,11 @@ public static int fibonacci(int fibIndex) {
 ```
 
 ## Feature Section
-List all the main features of your application with a brief description of each feature.
+Rhythm Game - To help the player deal with anxiety our rhythm game distracts the player by having them focus on tapping on small stars at very precise moments.
+Microphone Game - To help the player deal with panic attacks our microphone game visually rewards the player for blowing into the microphone in such a way that has been studied to help with releaving panic attacks.
+Medication Scheduling - To help remind the player to take their medications at the correct times their is a scheduling system so the player can set what medication, and what times/dates they need to take said medication. Notifications are sent when the player needs to take said medication.
+Dialog System - To give the player "someone" to talk to we implemented a chat tree style dialog system so that the player can "talk" to the jelly.
+Environment Effects - The background of the jelly changes dependent on time and weather of the location of the player.
 
 ## Final Project Status
 The final version of our project has achieved all out expected goals. We have some games, some chat functionality, and scheduling. However for this project to be released more work should be done. Jelly Pal would benefit from the interactivity of many of the bonus functionality. The most important next step for the project would be to improve the chat feature to have chatbot functionality. Bonding with the jelly is the key idea this application is built around and improved chatting would benefit that.
@@ -58,34 +62,34 @@ The final version of our project has achieved all out expected goals. We have so
 - Chatbot level interaction (Not Implemented)
 
 ## Sources
-[1] ìApple black silhouette with a leaf free iconî, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45](https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45).
+[1] ‚ÄúApple black silhouette with a leaf free icon‚Äù, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45](https://www.flaticon.com/free-icon/apple-black-silhouette-with-a-leaf_46504#term=food&page=1&position=45).
 
-[2] ìComments free iconî, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4](https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4).
+[2] ‚ÄúComments free icon‚Äù, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4](https://www.flaticon.com/free-icon/comments_25360#term=talking&page=1&position=4).
 
-[3] RainbowArt, ì5000 Flat Buttons Packî, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251](https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251).
+[3] RainbowArt, ‚Äú5000 Flat Buttons Pack‚Äù, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251](https://assetstore.unity.com/packages/2d/gui/icons/5000-flat-icons-buttons-pack-37251).
 
-[4] ìJELLY SQUASH FREE SPRITESî, GameArt2D.com, 2018. [Online]. Available: [https://www.gameart2d.com/jelly-squash-free-sprites.html](https://www.gameart2d.com/jelly-squash-free-sprites.html).
+[4] ‚ÄúJELLY SQUASH FREE SPRITES‚Äù, GameArt2D.com, 2018. [Online]. Available: [https://www.gameart2d.com/jelly-squash-free-sprites.html](https://www.gameart2d.com/jelly-squash-free-sprites.html).
 
-[5] ìGod Save Us - Instrumentsî, www.looperman.com, 2017. [Online]. Available: [https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop](https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop).
+[5] ‚ÄúGod Save Us - Instruments‚Äù, www.looperman.com, 2017. [Online]. Available: [https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop](https://www.looperman.com/loops/detail/116808/god-save-us-instruments-by-monstera-free-120bpm-classical-fx-loop).
 
-[6] Dog Eat Dog Games, ìAudio Visualizerî, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866](https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866).
+[6] Dog Eat Dog Games, ‚ÄúAudio Visualizer‚Äù, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866](https://assetstore.unity.com/packages/tools/audio/audio-visualizer-47866).
 
-[7] Hippo, "Simple Android Notifications Freeî, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626](https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626).
+[7] Hippo, "Simple Android Notifications Free‚Äù, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626](https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626).
 
-[8] Moonflower Carnivore, "Jiggly Bubble Freeî, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236](https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236).
+[8] Moonflower Carnivore, "Jiggly Bubble Free‚Äù, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236](https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236).
 
-[9] ìHamburger Meal free iconî, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60](https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60).
+[9] ‚ÄúHamburger Meal free icon‚Äù, www.flaticon.com, 2018. [Online]. Available: [https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60](https://www.flaticon.com/free-icon/hamburger-meal_72341#term=burger&page=1&position=60).
 
-[10] Grapes, ìAnother oneî, ccmixter.org, 2009. [Online]. Available: [http://ccmixter.org/files/grapes/19168](http://ccmixter.org/files/grapes/19168).
+[10] Grapes, ‚ÄúAnother one‚Äù, ccmixter.org, 2009. [Online]. Available: [http://ccmixter.org/files/grapes/19168](http://ccmixter.org/files/grapes/19168).
 
-[11] Pixel Crushers, "Dialogue System for Unityî, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672](https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672).
+[11] Pixel Crushers, "Dialogue System for Unity‚Äù, assetstore.unity.com, 2018. [Online]. Available: [https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672](https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672).
 
-[12] A. Pantera, "Background Nightî, opengameart.org, 2015. [Online]. Available: [https://opengameart.org/content/background-night](https://opengameart.org/content/background-night).
+[12] A. Pantera, "Background Night‚Äù, opengameart.org, 2015. [Online]. Available: [https://opengameart.org/content/background-night](https://opengameart.org/content/background-night).
 
-[13] FullTiltBoogie, "Starter Particle Packî, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179](https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179).
+[13] FullTiltBoogie, "Starter Particle Pack‚Äù, assetstore.unity.com, 2017. [Online]. Available: [https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179](https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179).
 
-[14] …crivain, "Starî, opengameart.org, 2010. [Online]. Available: [https://opengameart.org/content/star](https://opengameart.org/content/star).
+[14] √âcrivain, "Star‚Äù, opengameart.org, 2010. [Online]. Available: [https://opengameart.org/content/star](https://opengameart.org/content/star).
 
-[15] Y. Chao, "Music Syncing in Rhythm Gamesî, gamasutra.com, 2017. [Online]. Available: [https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php](https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php).
+[15] Y. Chao, "Music Syncing in Rhythm Games‚Äù, gamasutra.com, 2017. [Online]. Available: [https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php](https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php).
 
-[16] Unity Answers, "Set Objects Child to Active/Inactive(Solved)î, 2015. [Online]. Available: [https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html](https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html).
+[16] Unity Answers, "Set Objects Child to Active/Inactive(Solved)‚Äù, 2015. [Online]. Available: [https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html](https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html).
