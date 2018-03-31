@@ -33,11 +33,11 @@ public static int fibonacci(int fibIndex) {
 ```
 
 ## Feature Section
-Rhythm Game - To help the player deal with anxiety our rhythm game distracts the player by having them focus on tapping on small stars at very precise moments.
-Microphone Game - To help the player deal with panic attacks our microphone game visually rewards the player for blowing into the microphone in such a way that has been studied to help with releaving panic attacks.
-Medication Scheduling - To help remind the player to take their medications at the correct times their is a scheduling system so the player can set what medication, and what times/dates they need to take said medication. Notifications are sent when the player needs to take said medication.
-Dialog System - To give the player "someone" to talk to we implemented a chat tree style dialog system so that the player can "talk" to the jelly.
-Environment Effects - The background of the jelly changes dependent on time and weather of the location of the player.
+* Rhythm Game - To help the player deal with anxiety our rhythm game distracts the player by having them focus on tapping on small stars at very precise moments.
+* Microphone Game - To help the player deal with panic attacks our microphone game visually rewards the player for blowing into the microphone in such a way that has been studied to help with releaving panic attacks.
+* Medication Scheduling - To help remind the player to take their medications at the correct times their is a scheduling system so the player can set what medication, and what times/dates they need to take said medication. Notifications are sent when the player needs to take said medication.
+* Dialog System - To give the player "someone" to talk to we implemented a chat tree style dialog system so that the player can "talk" to the jelly.
+* Environment Effects - The background of the jelly changes dependent on time and weather of the location of the player.
 
 ## Final Project Status
 The final version of our project has achieved all out expected goals. We have some games, some chat functionality, and scheduling. However for this project to be released more work should be done. Jelly Pal would benefit from the interactivity of many of the bonus functionality. The most important next step for the project would be to improve the chat feature to have chatbot functionality. Bonding with the jelly is the key idea this application is built around and improved chatting would benefit that.
