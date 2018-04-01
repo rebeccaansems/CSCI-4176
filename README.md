@@ -14,7 +14,7 @@ Installation instructions for markers.
 
 **Problem 1: We needed a method to find the inactive Gameobjects**
 
-In genernal, we can controll the activation of gameobject with *Gameobject.find*. However, if you set the Gameobjects up  as Inactive ones, you can not find the objects with *Gameobject.find*. There are many ways to solve this problem, but we used the parents Gameobject and *GetComponentsInChildren<Transform>*.
+In general, we can control the activation of gameobject with *Gameobject.find*. However, if you set the Gameobjects up as inactive ones, you cannot find the objects with *Gameobject.find*. There are many ways to solve this problem, but we used the parents Gameobject and *GetComponentsInChildren<Transform>*.
 
 ```
 void Start() {
@@ -37,8 +37,9 @@ public void ChangeButton(bool buttonGroup) {
 
 **Problem 2: Codes for reading the breathing data from the mic**
 
-In Panic Attack activity, we needed to get the status of uesrs' breathing. 
-Therefore, we used a muted audio listener, then controlled the animation with the breathing time.
+In Panic Attack activity we needed to get the status of user’s breathing. 
+This is done using an audio listener on the microphone which plays back the audio is records. Playback of the audio resulted in a feedback loop with the microphone as it picked up the playback sound of what it just read.
+Therefore we used a muted audio listener then controlled the animation with the breathing time.
 
 ```
 void Update(){
@@ -74,7 +75,7 @@ void Update(){
 
 **Problem 3: Moving the beats in time in the Rhythm Game**
 
-It was hard to sync the music notes with the music correctly. 
+It was hard to sync the music notes with the music correctly. Tracking the time passed since the song started can result in slowly thrown off beat timing. 
 This was done by finding beats per second divided by frames per second), see the init of the song player.
 
 ```
