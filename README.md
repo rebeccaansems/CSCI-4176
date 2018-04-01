@@ -4,7 +4,6 @@ Jelly Pal is an interactive friend who lives in your phone and helps manage your
 ![Jelly Pal Home Screen](Screenshots/main_menu.png "The home screen of the Jelly Pal app")
 
 ## Libraries
-Provide a list of **ALL** the libraries you used for your project. Example:
 
 **google-gson:** Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Source [here](https://github.com/google/gson)
 
@@ -155,3 +154,5 @@ The final version of our project has achieved all out expected goals. We have so
 [15] Y. Chao, "Music Syncing in Rhythm Games”, gamasutra.com, 2017. [Online]. Available: [https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php](https://www.gamasutra.com/blogs/YuChao/20170316/293814/Music_Syncing_in_Rhythm_Games.php).
 
 [16] Unity Answers, "Set Objects Child to Active/Inactive(Solved)”, 2015. [Online]. Available: [https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html](https://answers.unity.com/questions/894211/set-objects-child-to-activeinactive.html).
+
+[17] OpenWeatherMap, "Weather API", 2018. [Online]. Available: [http://openweathermap.org/api](http://openweathermap.org/api).
