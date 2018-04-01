@@ -5,7 +5,15 @@ Jelly Pal is an interactive friend who lives in your phone and helps manage your
 
 ## Libraries
 
-**google-gson:** Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Source [here](https://github.com/google/gson)
+This project was mostly completed using the native C# libraries and the built-in Unity libraries. The third-party libraries used for the more complex features and effects are as follows:
+
+**Pixel Crushers Dialogue System for Unity:** A library that allows for building complex dialog trees in Unity. Different responses trigger different paths through the tree. Source [here](https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672)
+
+**Hippo Simple Android Notifications:** Enables the use of local notifications in Android. Allows for customization of notification icon and colors. Source [here](https://assetstore.unity.com/packages/tools/integration/simple-android-notifications-free-68626)
+
+**Moonflower Carnivore Jiggly Bubble Free:** A Unity particle effect package that contains various bubble animations. Source [here](https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236)
+
+**Full Tilt Boogie Starter Particle Pack:** A customizable Unity particle effect package that contains explosion and ambient animations with textures. Source [here](https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179)
 
 ## Installation Notes
 Installation instructions for markers.
