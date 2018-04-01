@@ -12,26 +12,85 @@ Provide a list of **ALL** the libraries you used for your project. Example:
 Installation instructions for markers.
 
 ## Code Examples
-You will encounter roadblocks and problems while developing your project. Share 2-3 'problems' that your team solved while developing your project. Write a few sentences that describe your solution and provide a code snippet/block that shows your solution. Example:
 
-**Problem 1: We needed a method to calculate a Fibonacci sequence**
+**Problem 1: We needed a method to find the inactive Gameobjects**
+In genernal, we can controll the activation of gameobject with *Gameobject.find*. However, if you set the Gameobjects up  as Inactive ones, you can not find the objects with *Gameobject.find*. There are many ways to solve this problem, but we used the parents Gameobject and *GetComponentsInChildren<Transform>*.
 
-A short description.
 ```
-// The method we implemented that solved our problem
-public static int fibonacci(int fibIndex) {
-    if (memoized.containsKey(fibIndex)) {
-        return memoized.get(fibIndex);
-    } else {
-        int answer = fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2);
-        memoized.put(fibIndex, answer);
-        return answer;
-    }
+void Start() {
+    gameObjectArray1 = GameObject.FindGameObjectsWithTag ("Buttons");
+    tmpObject = GameObject.FindGameObjectWithTag ("TestButtons");
+    allChildren = tmpObject.GetComponentsInChildren<Transform>(true);
 }
 
-// Source: Wikipedia Java [1]
+public void ChangeButton(bool buttonGroup) {
+    foreach (GameObject go in gameObjectArray1) {
+        go.SetActive (false);
+    }
+    foreach (Transform child in allChildren) {
+        child.gameObject.SetActive (true);
+    }
+}
+    
+// Source: Unity Community [16]
 ```
 
+**Problem 2: Codes for reading the breathing data from the mic**
+In Panic Attack activity, we needed to get the status of uesrs' breathing. 
+Therefore, we used a muted audio listener, then controlled the animation with the breathing time.
+
+```
+void Update(){
+    //Get normalized readings from the mic
+    float[] samples = GetAudioSamples(audioSource);
+    //Get their average volume
+    float average = AverageVolume(samples);
+    bubbleTime -= Time.deltaTime;
+
+    if (average > 0.003F){
+        if (bubbleTime <= 0.0f){
+            //Restart bubble animation timeout
+            bubbleTime = 1.0f;
+            //Show bubbles
+            bubbles.Play(true);
+        }
+        if (isVisible(jellyPal)){
+            //Float Jelly up
+            jellyPal.transform.Translate(0F, 0.05F, 0F);
+        }
+    } 
+    else{
+        if (bubbleTime <= 0.0f){
+            bubbles.Stop(true);
+        }
+        //Sink back down
+        if (jellyPal.transform.position.y > baseLevel){
+            jellyPal.transform.Translate(0F, -0.01F, 0F);
+        }
+    }
+}
+```
+
+**Problem 3: Moving the beats in time in the Rhythm Game**
+It was hard to sync the music notes with the music correctly. 
+This was done by finding beats per second divided by frames per second), see the init of the song player.
+
+```
+void Update(){
+    // Remove the beat if it has been missed
+    if (SongPlayer.beatTime > (songBeatPosition + BUFFER_TIME)){
+        beatFeedback.text = "MISS";
+        SongPlayer.missed += 1;
+        Destroy(gameObject);
+    }
+    // The step function linearly approaches an asymptote at 1
+    step = (beatInitAdvance - (songBeatPosition - SongPlayer.beatTime)) / beatInitAdvance;
+    transform.position = Vector2.Lerp(startPoint, endPoint, step);
+}
+
+// Source: Gamasutra.com [15]
+```
+    
 ## Feature Section
 * Rhythm Game - To help the player deal with anxiety our rhythm game distracts the player by having them focus on tapping on small stars at very precise moments.
 * Microphone Game - To help the player deal with panic attacks our microphone game visually rewards the player for blowing into the microphone in such a way that has been studied to help with releaving panic attacks.
