@@ -16,7 +16,24 @@ This project was mostly completed using the native C# libraries and the built-in
 **Full Tilt Boogie Starter Particle Pack:** A customizable Unity particle effect package that contains explosion and ambient animations with textures. Source [here](https://assetstore.unity.com/packages/vfx/particles/starter-particle-pack-83179)
 
 ## Installation Notes
-Installation instructions for markers.
+**Requirements**
+- Unity with Android Support
+- Android SDK
+
+**Steps to Install**
+1. Download the project .zip file from [github](https://github.com/rebeccaansems/CSCI-4176) and unzip it
+2. Open the project in Unity
+3. Go to File>Build Settings
+4. Ensure all scenes are checked
+5. Under the 'Android' tab (near the bottom of the window)...
+- Ensure 'Build System' is set to 'Internal'
+- Click 'Build'
+- The save window that appears is where you will save the Android APK
+- NOTE: If you have already configured Unity to point to the Android SDK, the app will build after you save the APK. If not, the next window will be where you select the folder the Android SDK is saved in.
+6. The project will build and the APK will be saved in the location you specified.
+7. To run the APK on your phone, you can either 'File>Build and Run' with your phone plugged into the computer or you can transfer the APK to your phone and install it as you would any app.
+**If you want to run from the Unity player, it is helpful to change the aspect ratio to 'WXGA Portrait (800x1280)' to imitate an Android screen (though some aspects of the app may behave incorrectly using this method of testing)**
+
 
 ## Code Examples
 
