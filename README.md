@@ -26,13 +26,13 @@ This project was mostly completed using the native C# libraries and the built-in
 3. Go to File>Build Settings
 4. Ensure all scenes are checked
 5. Under the 'Android' tab (near the bottom of the window)...
-- Ensure 'Build System' is set to 'Internal'
-- Click 'Build'
-- The save window that appears is where you will save the Android APK
-- NOTE: If you have already configured Unity to point to the Android SDK, the app will build after you save the APK. If not, the next window will be where you select the folder the Android SDK is saved in.
+    - Ensure 'Build System' is set to 'Internal'
+    - Click 'Build'
+    - The save window that appears is where you will save the Android APK
+    - NOTE: If you have already configured Unity to point to the Android SDK, the app will build after you save the APK. If not, the next window will be where you select the folder the Android SDK is saved in.
 6. The project will build and the APK will be saved in the location you specified.
 7. To run the APK on your phone, you can either 'File>Build and Run' with your phone plugged into the computer or you can transfer the APK to your phone and install it as you would any app.
-**If you want to run from the Unity player, it is helpful to change the aspect ratio to 'WXGA Portrait (800x1280)' to imitate an Android screen (though some aspects of the app may behave incorrectly using this method of testing)**
+8. (Optional) If you want to run from the Unity player, it is helpful to change the aspect ratio to 'WXGA Portrait (800x1280)' to imitate an Android screen (though some aspects of the app may behave incorrectly using this method of testing)
 
 
 ## Code Examples
